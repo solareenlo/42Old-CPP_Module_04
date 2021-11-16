@@ -1,5 +1,10 @@
 # 42Old-CPP_Module_04
 
+## ex02
+### Abstract class
+- > Defines an abstract type which cannot be instantiated, but can be used as a base class.
+- [abstract class](https://en.cppreference.com/w/cpp/language/abstract_class)
+
 ## ex01
 ### Shallow copy and deep copy
 - [13.16 — Shallow vs. deep copying](https://www.learncpp.com/cpp-tutorial/shallow-vs-deep-copying/)
