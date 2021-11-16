@@ -6,12 +6,12 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 14:28:50 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/16 14:32:55 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/16 14:51:50 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
-#ifndef WRONGCAT_HPP_
-#define WRONGCAT_HPP_
+#ifndef EX00_WRONGCAT_HPP_
+#define EX00_WRONGCAT_HPP_
 
 #include <iostream>
 #include <string>
@@ -28,4 +28,4 @@ class WrongCat : public WrongAnimal {
 
     void makeSound() const;
 };
-#endif  // WRONGCAT_HPP_
+#endif  // EX00_WRONGCAT_HPP_

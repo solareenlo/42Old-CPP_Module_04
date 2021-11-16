@@ -6,12 +6,12 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 14:16:26 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/16 14:17:42 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/16 14:51:26 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP_
-#define CAT_HPP_
+#ifndef EX00_CAT_HPP_
+#define EX00_CAT_HPP_
 
 #include "Animal.hpp"
 
@@ -25,4 +25,4 @@ class Cat : public Animal {
 
     void makeSound() const;
 };
-#endif  // CAT_HPP_
+#endif  // EX00_CAT_HPP_

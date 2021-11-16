@@ -1,4 +1,4 @@
-# Makefile for Old-CPP Module 04 ex00, updated Tue Nov 16 14:38:26 JST 2021
+# Makefile for Old-CPP Module 04 ex00, updated Tue Nov 16 14:54:54 JST 2021
 
 SRC := Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp main.cpp
 OBJ := Animal.o Cat.o Dog.o WrongAnimal.o WrongCat.o main.o
@@ -15,6 +15,7 @@ SRC_DIR := ./
 OBJ_DIR := obj
 SRCS    := $(addprefix $(SRC_DIR)/, $(SRC))
 OBJS    := $(addprefix $(OBJ_DIR)/, $(OBJ))
+HEADERS := $(shell find . -type f -name '*.hpp' -print)
 
 .PHONY:	all
 all: $(NAME)
@@ -30,7 +31,7 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
 
 .PHONY: lint
 lint:
-	cpplint $(SRC)
+	cpplint $(SRC) $(HEADERS)
 
 .PHONY: leak
 leak: CFLAGS += -g -fsanitize=leak
