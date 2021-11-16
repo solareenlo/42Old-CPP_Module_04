@@ -1,5 +1,9 @@
 # 42Old-CPP_Module_04
 
+## ex01
+### Shallow copy and deep copy
+- [13.16 — Shallow vs. deep copying](https://www.learncpp.com/cpp-tutorial/shallow-vs-deep-copying/)
+
 ## ex00
 ### Virtual function
 - [virtual function specifier](https://en.cppreference.com/w/cpp/language/virtual)
