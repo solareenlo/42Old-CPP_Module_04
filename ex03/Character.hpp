@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 01:12:38 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/17 02:12:00 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/17 04:05:50 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 class Character : public ICharacter {
  public:
     Character();
+    explicit Character(std::string const& name);
     virtual ~Character();
     Character(Character const& src);
 
