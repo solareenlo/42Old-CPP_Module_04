@@ -1,5 +1,12 @@
 # 42Old-CPP_Module_04
 
+## ex03
+- Abstract and Interface
+- interface は `can-do` 関係，abstract は `is-a` 関係．
+- Interface とは，純粋仮想関数だけで構築された Abstract class の特別なバージョンのこと．
+- Interface は，can-do 関係と呼ばれる関係性を構築する．
+- Interface は，そこから派生したクラスが「何ができるか」を表現するもの．
+
 ## ex02
 ### Abstract class
 - > Defines an abstract type which cannot be instantiated, but can be used as a base class.
