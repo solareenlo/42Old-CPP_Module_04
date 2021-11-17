@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 01:24:58 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/17 03:38:47 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/17 10:53:50 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ class MateriaSource : public IMateriaSource {
     AMateria* materia_[4];
 
     void deleteMateria(AMateria* m);
+    bool haveMateria(AMateria* m);
 };
 
 #endif  // EX03_MATERIASOURCE_HPP_

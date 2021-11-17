@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 01:12:38 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/17 04:05:50 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/17 11:24:33 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class Character : public ICharacter {
     AMateria* getMateria(int idx) const;
     void equip(AMateria* m);
     void unequip(int idx);
-    void use(int idx, ICharacter& target);
+    void use(int idx, ICharacter const& target);
 
  private:
     static const int MAX_NUM_MATERIA_ = 4;

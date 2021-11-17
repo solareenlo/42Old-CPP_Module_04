@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 03:30:41 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/17 10:39:53 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/17 11:16:47 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ int main() {
     IMateriaSource* src = new MateriaSource();
     src->learnMateria(new Ice());
     src->learnMateria(new Cure());
+    src->learnMateria(new Cure());
     std::cout << std::endl;
 
     std::cout << "< Constructor of me>" << std::endl;
@@ -34,6 +35,8 @@ int main() {
     me->equip(tmp);
     tmp = src->createMateria("cure");
     me->equip(tmp);
+    tmp = src->createMateria("fire");
+    me->equip(tmp);
     std::cout << std::endl;
 
     std::cout << "< Use materia >" << std::endl;
@@ -41,6 +44,7 @@ int main() {
     me->use(0, *bob);
     me->use(1, *bob);
     me->use(2, *bob);
+    me->use(100, *bob);
     std::cout << std::endl;
 
     std::cout << "< Destructor >" << std::endl;

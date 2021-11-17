@@ -1,4 +1,4 @@
-# Makefile for Old-CPP Module 04 ex03, updated Wed Nov 17 03:46:20 JST 2021
+# Makefile for Old-CPP Module 04 ex03, updated Wed Nov 17 11:32:08 JST 2021
 
 SRC := AMateria.cpp Character.cpp Cure.cpp Ice.cpp MateriaSource.cpp main.cpp
 OBJ := AMateria.o Character.o Cure.o Ice.o MateriaSource.o main.o

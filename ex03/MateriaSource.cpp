@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 02:42:59 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/17 10:32:49 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/17 11:16:09 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -56,23 +56,31 @@ void MateriaSource::learnMateria(AMateria* m) {
     if (m == NULL) {
         return;
     }
+    bool learned = false;
     for (int i = 0; i < MAX_NUM_MATERIA_; i++) {
-        if (this->getMateria(i) == NULL) {
+        if (this->getMateria(i) == NULL && this->haveMateria(m) == false) {
+            std::cout << "leanMateria: " << m->getType() << std::endl;
             this->materia_[i] = m;
+            learned = true;
             break;
         }
+    }
+    if (learned == false) {
+        delete m;
     }
 }
 
 AMateria* MateriaSource::createMateria(std::string const& type) {
     for (int i = 0; i < MateriaSource::MAX_NUM_MATERIA_; i++) {
-        if (this->getMateria(i) != NULL) {
-            if (type == this->getMateria(i)->getType()) {
-                std::cout << "Create Materia: " << type << std::endl;
-                return this->getMateria(i)->clone();
-            }
+        if (this->getMateria(i) == NULL) {
+            continue;
+        }
+        if (type == this->getMateria(i)->getType()) {
+            std::cout << "Create Materia: " << type << std::endl;
+            return this->getMateria(i)->clone();
         }
     }
+    std::cout << "Don't create Materia: " << type << std::endl;
     return NULL;
 }
 
@@ -81,4 +89,19 @@ void MateriaSource::deleteMateria(AMateria* m) {
         delete m;
     }
     m = NULL;
+}
+
+bool MateriaSource::haveMateria(AMateria* m) {
+    if (m == NULL) {
+        return false;
+    }
+    for (int i = 0; i < MAX_NUM_MATERIA_; i++) {
+        if (this->getMateria(i) == NULL) {
+            continue;
+        }
+        if (this->getMateria(i)->getType() == m->getType()) {
+            return true;
+        }
+    }
+    return false;
 }

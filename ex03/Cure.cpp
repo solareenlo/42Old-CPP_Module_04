@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 01:06:50 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/17 10:10:30 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/17 11:18:13 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -37,6 +37,6 @@ Cure& Cure::operator=(Cure const& rhs) {
 
 AMateria* Cure::clone() const { return new Cure(*this); }
 
-void Cure::use(ICharacter& target) {
-    std::cout << "* heals " << target.getName() << "’s wounds * " << std::endl;
+void Cure::use(ICharacter const& target) {
+    std::cout << "* heals " << target.getName() << "'s wounds * " << std::endl;
 }

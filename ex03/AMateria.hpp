@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 00:13:56 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/17 04:06:41 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/17 11:17:49 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ class AMateria {
     std::string const& getType() const;
 
     virtual AMateria* clone() const = 0;
-    virtual void use(ICharacter& target);
+    virtual void use(ICharacter const& target);
 
  protected:
     std::string type_;

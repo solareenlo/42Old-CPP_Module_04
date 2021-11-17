@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 00:28:43 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/17 00:56:48 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/17 11:23:32 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -43,14 +43,7 @@ AMateria& AMateria::operator=(AMateria const& rhs) {
 std::string const& AMateria::getType() const { return this->type_; }
 void AMateria::setType(std::string const& type) { this->type_ = type; }
 
-void AMateria::use(ICharacter& target) {
-    if (target.getName() == "Ice") {
-        std::cout << "* shoots an ice bolt at " << target.getName() << " *"
-                  << std::endl;
-    } else if (target.getName() == "Cure") {
-        std::cout << "* heals " << target.getName() << "’s wounds * "
-                  << std::endl;
-    } else {
-        std::cout << "* *** *" << std::endl;
-    }
+void AMateria::use(ICharacter const& target) {
+    std::cout << "I used the materia to " << target.getName() << "."
+              << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 01:05:21 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/17 09:57:19 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/17 11:18:24 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class Cure : public AMateria {
     Cure& operator=(Cure const& rhs);
 
     virtual AMateria* clone() const;
-    virtual void use(ICharacter& target);
+    virtual void use(ICharacter const& target);
 };
 
 #endif  // EX03_CURE_HPP_

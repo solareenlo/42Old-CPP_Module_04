@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 01:32:02 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/17 10:42:04 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/17 11:24:53 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ void Character::unequip(int idx) {
     }
 }
 
-void Character::use(int idx, ICharacter& target) {
+void Character::use(int idx, ICharacter const& target) {
     if (this->getMateria(idx)) {
         this->getMateria(idx)->use(target);
     } else {
