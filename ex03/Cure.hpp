@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 01:05:21 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/17 01:09:17 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/17 09:57:19 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@
 class Cure : public AMateria {
  public:
     Cure();
-    explicit Cure(std::string const& type);
     virtual ~Cure();
     Cure(Cure const& src);
 

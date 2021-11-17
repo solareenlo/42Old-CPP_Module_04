@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 02:42:59 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/17 03:38:36 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/17 09:56:04 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ MateriaSource& MateriaSource::operator=(MateriaSource const& rhs) {
         std::cout << "Copy assignment operator! " << std::endl;
         for (int i = 0; i < MateriaSource::MAX_NUM_MATERIA_; i++) {
             this->deleteMateria(this->materia_[i]);
-            this->materia_[i] = NULL;
             if (rhs.getMateria(i) != NULL) {
                 this->materia_[i] = rhs.getMateria(i)->clone();
             }
@@ -78,4 +77,5 @@ void MateriaSource::deleteMateria(AMateria* m) {
     if (m != NULL) {
         delete m;
     }
+    m = NULL;
 }

@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 01:06:50 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/17 01:07:36 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/17 09:57:27 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -14,10 +14,6 @@
 
 Cure::Cure() : AMateria("Cure") {
     std::cout << this->getType() << ": constructor!!" << std::endl;
-}
-
-Cure::Cure(std::string const& type) : AMateria(type) {
-    std::cout << this->type_ << ": constructor with arg!!" << std::endl;
 }
 
 Cure::~Cure() { std::cout << this->type_ << ": destructor!!" << std::endl; }

@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 00:26:06 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/17 01:03:58 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/17 09:56:44 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -14,10 +14,6 @@
 
 Ice::Ice() : AMateria("Ice") {
     std::cout << this->getType() << ": constructor!!" << std::endl;
-}
-
-Ice::Ice(std::string const& type) : AMateria(type) {
-    std::cout << this->type_ << ": constructor with arg!!" << std::endl;
 }
 
 Ice::~Ice() { std::cout << this->type_ << ": destructor!!" << std::endl; }

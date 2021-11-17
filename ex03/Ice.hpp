@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 00:24:26 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/17 01:09:48 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/17 09:56:37 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@
 class Ice : public AMateria {
  public:
     Ice();
-    explicit Ice(std::string const& type);
     virtual ~Ice();
     Ice(Ice const& src);
 
