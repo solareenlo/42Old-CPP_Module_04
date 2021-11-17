@@ -41,6 +41,14 @@ leak: re
 address: CFLAGS += -g -fsanitize=address
 address: re
 
+.PHONY: thread
+thread: CFLAGS += -g -fsanitize=thread
+thread: re
+
+.PHONY: memory
+memory: CFLAGS += -g -fsanitize=memory
+memory: re
+
 .PHONY: clean
 clean:
 	$(RM) Makefile.bak $(NAME).dSYM $(OBJ_DIR)
