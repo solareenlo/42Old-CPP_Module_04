@@ -6,13 +6,13 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 00:26:06 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/17 09:56:44 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/17 10:10:16 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
 #include "Ice.hpp"
 
-Ice::Ice() : AMateria("Ice") {
+Ice::Ice() : AMateria("ice") {
     std::cout << this->getType() << ": constructor!!" << std::endl;
 }
 

@@ -6,7 +6,7 @@
 /*   By: tayamamo <tayamamo@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 01:32:02 by tayamamo          #+#    #+#             */
-/*   Updated: 2021/11/17 03:46:05 by tayamamo         ###   ########.fr       */
+/*   Updated: 2021/11/17 10:42:04 by tayamamo         ###   ########.fr       */
 /*   Copyright 2021                                                           */
 /* ************************************************************************** */
 
@@ -21,14 +21,14 @@ Character::Character(std::string const& name) : materia_(), name_(name) {
 }
 
 Character::~Character() {
-    std::cout << this->name_ << ": destructor!!" << std::endl;
+    std::cout << this->name_ << ": destructor!" << std::endl;
     for (int i = 0; i < Character::MAX_NUM_MATERIA_; i++) {
         this->deleteMateria(this->materia_[i]);
     }
 }
 
 Character::Character(Character const& src) : name_(src.getName()) {
-    std::cout << "Copy constructor!! ";
+    std::cout << "Copy constructor! ";
     std::cout << "Copying from " << src.getName() << "." << std::endl;
     for (int i = 0; i < Character::MAX_NUM_MATERIA_; i++) {
         if (src.getMateria(i) != NULL) {
@@ -39,7 +39,7 @@ Character::Character(Character const& src) : name_(src.getName()) {
 
 Character& Character::operator=(Character const& rhs) {
     if (this != &rhs) {
-        std::cout << "Copy assignment operator!! ";
+        std::cout << "Copy assignment operator! ";
         std::cout << "Copying from " << rhs.getName() << " to "
                   << this->getName() << "." << std::endl;
         for (int i = 0; i < Character::MAX_NUM_MATERIA_; i++) {
@@ -83,6 +83,8 @@ void Character::unequip(int idx) {
 void Character::use(int idx, ICharacter& target) {
     if (this->getMateria(idx)) {
         this->getMateria(idx)->use(target);
+    } else {
+        std::cout << "* I'm not equipped with this. *" << std::endl;
     }
 }
 
